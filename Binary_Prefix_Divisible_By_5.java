@@ -7,7 +7,7 @@ public class Binary_Prefix_Divisible_By_5 {
             l1.add(val==0);
         }
         return l1;
-        //TC->O(N).
-        //SC->O(N).
+        //TimeComplexity->O(N).
+        //SpaceComplexity->O(N).
     }
 }
