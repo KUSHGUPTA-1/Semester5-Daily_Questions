@@ -1,0 +1,22 @@
+public class Negative_Weight_Cycle {
+    public boolean isNegativeWeightCycle(int V, int[][] edges) {
+        long[] dist = new long[V];
+        for (int i = 0; i < V; i++) {
+            boolean changed = false;
+            for (int[] e : edges) {
+                int u = e[0];
+                int v = e[1];
+                int w = e[2];
+                if (dist[v] > dist[u] + w) {
+                    dist[v] = dist[u] + w;
+                    changed = true;
+                    if (i == V - 1)
+                        return true;
+                }
+            }
+            if (!changed)
+                return false;
+        }
+        return false;
+    }
+}
